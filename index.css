@@ -1,96 +1,44 @@
-/* Reset and Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
 body {
-  background-color: #c4bcc9;
+  background-color: var(--background-color);
   text-align: center;
   padding-top: 100px;
 }
 
-/* Navbar Styles */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #b3a2bd;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
-
-.left-section {
-  display: flex;
-  align-items: center;
-}
-
-/* Search Bar */
-.search-container {
-  display: flex;
-  align-items: center;
-  background-color: white;
-  border-radius: 5px;
-  padding: 5px 10px;
-}
-
-.search-container input {
-  border: none;
-  outline: none;
-  width: 200px;
-}
-
-.search-container button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-/* Right Section (Login/Register Buttons) */
-.right-section {
-  display: flex;
-  gap: 15px;
-}
-
 .btn {
   padding: 8px 16px;
-  background-color: #d3b6e0;
+  background-color: var(--button-bg);
   border: none;
   border-radius: 20px;
   cursor: pointer;
   text-decoration: none;
-  color: #5b2b7b;
+  color: var(--text-color);
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #c08bd1;
+  background-color: var(--button-hover-bg);
 }
 
 /* Heading */
 h1 {
-  color: #d43fca;
+  color: var(--game-button-border);
   margin-bottom: 20px;
 }
 
 /* Game Sections */
 .game-section {
-  background-color: #b997d0;
+  background-color: var(--game-section-bg);
   width: 90%;
   max-width: 1000px;
   margin: 20px auto;
   padding: 20px;
-  border: 1px solid #7a5e91;
+  border: 1px solid var(--button-bg);
   border-radius: 10px;
 }
 
 .game-section h2 {
-  color: white;
+  color: var(--text-color);
   margin-bottom: 15px;
 }
 
@@ -106,8 +54,8 @@ h1 {
 .game-btn {
   flex: 1 1 calc(20% - 10px);
   aspect-ratio: 1 / 1;
-  background-color: white;
-  border: 1px solid #000;
+  background-color: var(--game-button-bg);
+  border: 1px solid var(--game-button-border);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -117,15 +65,15 @@ h1 {
 }
 
 .game-btn:hover {
-  background-color: #e3d1f0;
+  background-color: var(--game-button-hover-bg);
 }
 
 /* View All Button */
 .view-all-btn {
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #d3b6e0;
-  color: #d43fca;
+  background-color: var(--button-bg);
+  color: var(--text-color);
   font-weight: bold;
   border-radius: 20px;
   border: none;
@@ -134,7 +82,7 @@ h1 {
 }
 
 .view-all-btn:hover {
-  background-color: #c08bd1;
+  background-color: var(--button-hover-bg);
 }
 
 /* Responsive Design */
