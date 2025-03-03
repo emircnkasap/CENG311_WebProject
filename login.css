@@ -1,0 +1,80 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #c4bcc9;
+    text-align: center;
+    padding-top: 100px;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #b3a2bd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    background-color: #d3b6e0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #5b2b7b;
+    font-weight: bold;
+  }
+  
+  .btn:hover {
+    background-color: #c08bd1;
+  }
+  
+  /* Login Form */
+  .form-container {
+    background-color: #b997d0;
+    width: 90%;
+    max-width: 400px;
+    margin: 120px auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .form-container h2 {
+    color: white;
+    margin-bottom: 15px;
+  }
+  
+  /* Inputs */
+  .form-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #7a5e91;
+    border-radius: 5px;
+  }
+  
+  /* Submit Button */
+  .submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #d3b6e0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: #c08bd1;
+  }
+  
