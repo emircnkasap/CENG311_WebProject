@@ -1,0 +1,117 @@
+body {
+    background-color: var(--background-color);
+    text-align: center;
+    padding-top: 80px;
+}
+
+/* Game Header with Responsive Background Image */
+.game-header {
+    width: 100%;
+    height: 40vh; /* 40% of the viewport height */
+    background: url('game1.jpeg') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Dark Overlay for Readability */
+.game-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    width: 90%; /* Squeeze inside the webpage */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.btn {
+    padding: 8px 16px;
+    background-color: var(--button-bg);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+.game-overlay h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.basic-description {
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* Game Details Section */
+.game-details {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Ratings, Detailed Explanation, Profile */
+.ratings, .detailed-description, .profile {
+    background-color: var(--game-button-bg);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.ratings h2, .detailed-description h2, .profile h2 {
+    color: var(--subheading-color);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .game-header {
+        height: 35vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .game-header {
+        height: 30vh;
+    }
+
+    .game-overlay {
+        width: 95%;
+    }
+
+    .game-overlay h1 {
+        font-size: 2rem;
+    }
+
+    .basic-description {
+        font-size: 1rem;
+    }
+
+    .game-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-header {
+        height: 25vh;
+    }
+
+    .game-overlay {
+        width: 98%;
+        padding: 20px;
+    }
+
+    .game-overlay h1 {
+        font-size: 1.8rem;
+    }
+
+    .basic-description {
+        font-size: 0.9rem;
+    }
+}
