@@ -22,7 +22,7 @@
     Koyu turuncu = #D35400
     Beyaz = #FFFFFF
     Biraz daha koyu mavi = #34495E
-    Hafif altın turuncu = #F39C12
+    Soft Amber = #E8A84E
     */
 
 
@@ -77,8 +77,8 @@
     /* DEAFULT - Beyaz */
     --game-button-bg: #FFFFFF;
     /* YAZ - Açık Kum Rengi */
-    /* DEAFULT - Hafif altın turuncu */
-    --game-button-hover-bg: #F39C12;
+    /* DEAFULT - Soft Amber */
+    --game-button-hover-bg: #E8A84E;
     /* YAZ - Deniz Mavisi - h1 color*/
     /* DEAFULT - Deep Blue */
     --game-button-border: #2C3E50;
