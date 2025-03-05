@@ -1,0 +1,7 @@
+Primary: Bright Red (#FF4500) or Electric Blue (#007BFF)
+Secondary: Bright Yellow (#FFD700)
+Accent: Purple (#A020F0)
+Background: Dark Gray (#1E1E1E)
+
+
+Bunlar kırmızı hazırlanan tema renkleri!
