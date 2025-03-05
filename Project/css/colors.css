@@ -1,0 +1,92 @@
+/* Colors.css - Tüm renkleri burada tanımlıyoruz */
+:root {
+
+    /* ---------YAZ TEMASI---------
+    Hafif Deniz Mavisi = #E6F7FF
+    Deniz Mavisi = #008CBA
+    Koyu Deniz Mavisi = #004466
+    Sıcak Sarı = #FFD700
+    Hafif Altın Sarısı = #FFC107
+    Deniz Mavisi = #0077B6
+    Biraz daha koyu mavi = #005B99
+    Kumsal Sarısı = #FFFAE5
+    Açık Kum Rengi = #FFE4B5
+    Arama Çubuğu Arka Planı = white
+    */
+
+    /*---------DEFAULT TEMA---------
+    Light Gray = #F2F2F2
+    Deep Blue = #2C3E50
+    Bright Cyan = #1ABC9C
+    Warm Orange = #E67E22
+    Koyu turuncu = #D35400
+    Beyaz = #FFFFFF
+    Biraz daha koyu mavi = #34495E
+    Hafif altın turuncu = #F39C12
+    */
+
+
+    /* =============================== */
+    /* GENEL ARKA PLAN & TEMEL RENKLER */
+    /* =============================== */
+
+    /* YAZ - Hafif Deniz Mavisi */
+    /* DEAFULT - Light Gray */
+    --background-color: #F2F2F2;
+    /* YAZ - Deniz Mavisi */
+    /* DEAFULT - Deep Blue */
+    --navbar-color: #2C3E50;
+    /* YAZ - Koyu Deniz Mavisi - h2 color*/
+    /* DEAFULT - Bright Cyan */
+    --text-color: #1ABC9C;
+
+    /* ============== */
+    /* BUTON RENKLERİ */
+    /* ============== */
+    /* YAZ - Sıcak Sarı */
+    /* DEAFULT - Warm Orange */
+    --button-bg: #E67E22;
+    /* YAZ - Hafif Altın Sarısı */
+    /* DEAFULT - Sunset Coral */
+    --button-hover-bg: #E74C3C;
+    /* YAZ - Koyu Mavi (buton içi yazılar) */
+    /* DEAFULT - Beyaz */
+    --button-text: #FFFFFF;
+
+    /* ======================= */
+    /* BAŞLIK & METİN RENKLERİ */
+    /* ======================= */
+    /* YAZ - Deniz Mavisi */
+    /* DEAFULT - Deep Blue */
+    --heading-color: #2C3E50;
+    /* YAZ - Biraz daha koyu mavi */
+    /* DEAFULT - Biraz daha koyu mavi */
+    --subheading-color: #34495E;
+
+    /* ======================= */
+    /* OYUN KARTLARI & KUTULAR */
+    /* ======================= */
+
+    /* YAZ - Kumsal Sarısı */
+    /* DEAFULT - Beyaz */
+    --game-section-bg: #FFFFFF;
+    /* YAZ - Sarı Çerçeve */
+    /* DEAFULT - Warm Orange */
+    --game-section-border: #E67E22;
+    /* YAZ - Kumsal Sarısı */
+    /* DEAFULT - Beyaz */
+    --game-button-bg: #FFFFFF;
+    /* YAZ - Açık Kum Rengi */
+    /* DEAFULT - Hafif altın turuncu */
+    --game-button-hover-bg: #F39C12;
+    /* YAZ - Deniz Mavisi - h1 color*/
+    /* DEAFULT - Deep Blue */
+    --game-button-border: #2C3E50;
+
+    /* =============== */
+    /* DİĞER ELEMANLAR */
+    /* =============== */
+    /* YAZ - Arama Çubuğu Arka Planı */
+    /* DEAFULT - Beyaz */
+    --search-bar-bg: white;
+}
