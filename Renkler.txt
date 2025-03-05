@@ -5,3 +5,12 @@ Background: Dark Gray (#1E1E1E)
 
 
 Bunlar kırmızı hazırlanan tema renkleri!
+
+
+
+Primary: Deep Blue (#2C3E50)
+Secondary: Bright Cyan (#1ABC9C)
+Accent: Warm Orange (#E67E22)
+Background: Clean White (#FFFFFF) or Light Gray (#F2F2F2)
+
+Sade temanın renkleri !
