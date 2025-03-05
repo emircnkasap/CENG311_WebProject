@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game List</title>
+    <link rel="stylesheet" href="../css/colors.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/gameList.css">
+</head>
+
+<body>
+
+    <!-- Navbar (Fixed Position) -->
+    <nav class="navbar">
+        <div class="left-section">
+            <div class="search-container">
+                <input type="text" placeholder="Search for games or profiles..." />
+                <button>🔍</button>
+            </div>
+        </div>
+        <div class="center-section">
+            <a href="index.html" class="navbarBtn">Home Page</a>
+        </div>
+        <div class="right-section">
+            <a href="login.html" class="navbarBtn">Login</a>
+            <a href="register.html" class="navbarBtn">Register</a>
+        </div>
+    </nav>
+
+    <!-- Page Title -->
+    <h1 class="page-title">Game List</h1>
+
+    <section class="game-list">
+        <div class="game-card" onclick="window.location.href='gamePage.html'">
+            <img src="../src/rdr2icon.png" alt="Game #1">
+            <div class="game-info">
+                <h2>Game #1</h2>
+                <p>Brief explanation about the game.</p>
+            </div>
+        </div>
+
+        <div class="game-card" onclick="window.location.href='gamePage.html'">
+            <img src="../src/rdr2icon.png" alt="Game #2">
+            <div class="game-info">
+                <h2>Game #2</h2>
+                <p>Brief explanation about the game.</p>
+            </div>
+        </div>
+
+        <div class="game-card" onclick="window.location.href='gamePage.html'">
+            <img src="../src/rdr2icon.png" alt="Game #3">
+            <div class="game-info">
+                <h2>Game #3</h2>
+                <p>Brief explanation about the game.</p>
+            </div>
+        </div>
+
+        <!-- Add more games as needed -->
+    </section>
+
+
+</body>
+
+</html>
