@@ -22,12 +22,13 @@ html {
     padding: 10px 20px;
 }
 
+/* Search Bar START */
 .left-section {
     display: flex;
     align-items: center;
 }
 
-/* Search Bar */
+
 .search-container {
     display: flex;
     align-items: center;
@@ -40,7 +41,6 @@ html {
     border: none;
     outline: none;
     width: pointer;
-    /*Burası değişti - 200px*/
 }
 
 .search-container button {
@@ -49,13 +49,17 @@ html {
     cursor: pointer;
 }
 
-/* Right Section (Login/Register Buttons) */
+/* Search Bar END */
+
+/* Right Section START (About_Us/Login/Register Buttons) */
 .right-section {
     display: flex;
     gap: 15px;
 }
 
-/* Center Section (Home Page Title in Navbar) */
+/* Right Section END (About_Us/Login/Register Buttons) */
+
+/* Center Section START (Home Page Title in Navbar) */
 .center-section {
     display: flex;
     justify-content: center;
@@ -65,7 +69,9 @@ html {
     transform: translateX(-50%);
 }
 
+/* Center Section END (Home Page Title in Navbar) */
 
+/*Navbar Button Types START*/
 .navbarBtn {
     padding: 8px 16px;
     background-color: var(--button-bg);
@@ -81,3 +87,5 @@ html {
 .navbarBtn:hover {
     background-color: var(--button-hover-bg);
 }
+
+/*Navbar Button Types END*/

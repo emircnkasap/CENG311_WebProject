@@ -12,7 +12,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Game List */
+/* Game List START */
 .game-list {
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@ body {
     gap: 20px;
 }
 
-/* Game Card */
+/* Game Card START*/
 .game-card {
     display: flex;
     width: 90%;
@@ -48,7 +48,7 @@ body {
     margin-right: 20px;
 }
 
-/* Game Info */
+/* Game Info START */
 .game-info {
     text-align: left;
 }
@@ -61,3 +61,7 @@ body {
 .game-info p {
     color: var(--subheading-color);
 }
+
+/* Game Info END */
+/* Game Card END */
+/* Game List END */

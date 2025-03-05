@@ -25,7 +25,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* Game Sections */
+/* Game Sections START*/
 .game-section {
   background-color: var(--game-section-bg);
   width: 90%;
@@ -41,7 +41,7 @@ h1 {
   margin-bottom: 15px;
 }
 
-/* Game Buttons */
+/* Game Buttons*/
 .game-list {
   display: flex;
   justify-content: space-between;
@@ -115,3 +115,5 @@ h1 {
     flex: 1 1 100%;
   }
 }
+
+/* Game Sections END*/

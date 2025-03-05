@@ -4,11 +4,12 @@ body {
     padding-top: 80px;
 }
 
-/* Game Header with Responsive Background Image */
+/* Game Header START */
 .game-header {
     width: 100%;
     /* 40% of the viewport height */
     height: 40vh;
+    /*Responsive Background Image*/
     background: url('../src/game1.jpeg') no-repeat center center/cover;
     position: relative;
     display: flex;
@@ -27,6 +28,18 @@ body {
     text-align: center;
 }
 
+.game-overlay h1 {
+    color: var(--button-text);
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.basic-description {
+    color: var(--button-text);
+    font-size: 1.2rem;
+}
+
+/* Game Header END */
 .btn {
     padding: 8px 16px;
     background-color: var(--button-bg);
@@ -37,17 +50,6 @@ body {
     color: var(--text-color);
     font-weight: bold;
     transition: background-color 0.3s ease;
-}
-
-.game-overlay h1 {
-    color: white;
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.basic-description {
-    color: white;
-    font-size: 1.2rem;
 }
 
 /* Game Details Section */
@@ -73,52 +75,4 @@ body {
 .detailed-description h2,
 .profile h2 {
     color: var(--subheading-color);
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .game-header {
-        height: 35vh;
-    }
-}
-
-@media (max-width: 768px) {
-    .game-header {
-        height: 30vh;
-    }
-
-    .game-overlay {
-        width: 95%;
-    }
-
-    .game-overlay h1 {
-        font-size: 2rem;
-    }
-
-    .basic-description {
-        font-size: 1rem;
-    }
-
-    .game-details {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .game-header {
-        height: 25vh;
-    }
-
-    .game-overlay {
-        width: 98%;
-        padding: 20px;
-    }
-
-    .game-overlay h1 {
-        font-size: 1.8rem;
-    }
-
-    .basic-description {
-        font-size: 0.9rem;
-    }
 }

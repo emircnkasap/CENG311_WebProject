@@ -1,0 +1,106 @@
+body {
+    background-color: var(--background-color);
+    /* Light Gray */
+    color: var(--navbar-color);
+    /* Deep Blue */
+    text-align: center;
+    padding-top: 100px;
+}
+
+.about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px;
+    background-color: var(--game-section-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.about-content {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+.about-content h1 {
+    color: var(--navbar-color);
+    /* Deep Blue */
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: var(--subheading-color);
+    /* Biraz daha koyu mavi */
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* =============================== */
+/* TAKIM BÖLÜMÜ */
+/* =============================== */
+
+.team {
+    background-color: var(--game-button-hover-bg);
+    /* Soft Amber */
+    padding: 50px;
+    border-radius: 10px;
+    margin: 50px auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.team h2 {
+    color: var(--navbar-color);
+    /* Deep Blue */
+    margin-bottom: 20px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background-color: var(--game-section-bg);
+    /* Beyaz */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+
+.team-member img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    color: var(--navbar-color);
+    /* Deep Blue */
+}
+
+.team-member p {
+    color: var(--subheading-color);
+    /* Biraz daha koyu mavi */
+}
