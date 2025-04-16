@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/colors.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/previewCard.css">
 </head>
 
 <body>
@@ -37,20 +38,20 @@
     <section class="game-section">
         <h2>Latest Featured Games</h2>
         <div class="game-list">
-            <button class="game-btn" onclick="window.location.href='gamePage.html'">
+            <button class="game-btn" onclick="window.location.href='gamePage.html'" data-game="game1">
                 <img src="../src/rdr2icon.png" alt="Game #1">
             </button>
-            <button class="game-btn" onclick="window.location.href='gamePage.html'">
+            <button class="game-btn" onclick="window.location.href='gamePage.html'" data-game="game2">
                 <img src="../src/mcicon.avif" alt="Game #2">
             </button>
-            <button class="game-btn" onclick="window.location.href='gamePage.html'">
+            <button class="game-btn" onclick="window.location.href='gamePage.html'" data-game="game3">
                 <img src="../src/gta-icon.jpg" alt="Game #3">
             </button>
-            <button class="game-btn" onclick="window.location.href='gamePage.html'">
+            <button class="game-btn" onclick="window.location.href='gamePage.html'" data-game="game4">
                 <img src="../src/terraria-icon.png" alt="Game #4">
             </button>
-            <button class="game-btn" onclick="window.location.href='gamePage.html'">
-                <img src="../src/poe2-icon.jpg" alt="Game #5">
+            <button class="game-btn" onclick="window.location.href='gamePage.html'" data-game="game5">
+                <img src=" ../src/poe2-icon.jpg" alt="Game #5">
             </button>
         </div>
         <button class="view-all-btn" onclick="window.location.href='gameList.html'">View all</button>
@@ -103,6 +104,13 @@
         <button class="view-all-btn" onclick="window.location.href='gameList.html'">View all</button>
     </section>
 
+
+
+    <!-- jQuery buraya -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Kendi JavaScript dosyan -->
+    <script src="../js/previewCard.js"></script>
 
 </body>
 
