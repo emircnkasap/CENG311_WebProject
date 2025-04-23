@@ -2,12 +2,44 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game Page</title>
     <link rel="stylesheet" href="../css/colors.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/gamePage.css">
+    <script src="../js/allGames.js" defer></script>
+    <script defer>
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const gameId = params.get('game');
+            const game = allGames.find(g => g.id === gameId);
+
+            if (!game) {
+                document.querySelector('.game-title').textContent = 'Game Not Found';
+                document.querySelector('.game-details').style.display = 'none';
+                return;
+            }
+
+            document.querySelector('.game-header').style.backgroundImage = `url(${game.img1})`;
+            document.querySelector('.game-title').textContent = game.title;
+
+            document.querySelector('.ratings').innerHTML = `
+                <h2>Ratings</h2>
+                ${'⭐'.repeat(Math.round(game.rating) || 0)} (${game.rating || 'N/A'}/5)
+            `;
+
+            document.querySelector('.detailed-description').innerHTML = `
+                <h2>Detailed Game Explanation</h2>
+                <p>${game.detailed || 'No detailed description provided.'}</p>
+            `;
+
+            document.querySelector('.profile').innerHTML = `
+                <h2>Developer Profile</h2>
+                <p>Developed by <strong>${game.developer || 'Unknown Developer'}</strong>.</p>
+            `;
+        });
+    </script>
 </head>
 
 <body>
@@ -30,29 +62,18 @@
         </div>
     </nav>
 
-    <!-- Game Header (Background Image) -->
+    <!-- Game Header -->
     <div class="game-header">
         <div class="game-overlay">
-            <h1>Game Name</h1>
-            <p class="basic-description">An immersive experience that takes you to another world.</p>
+            <h1 class="game-title">Loading...</h1>
         </div>
     </div>
 
-    <!-- Game Details Section -->
+    <!-- Game Details -->
     <div class="game-details">
-        <div class="ratings">
-            <h2>Ratings</h2>
-            ⭐⭐⭐⭐⭐ (4.8/5)
-        </div>
-        <div class="detailed-description">
-            <h2>Detailed Game Explanation</h2>
-            <p>This section provides an in-depth explanation of the game, its storyline, mechanics, and unique features.
-            </p>
-        </div>
-        <div class="profile">
-            <h2>Developer Profile</h2>
-            <p>Developed by <strong>XYZ Studios</strong>. Check out their other games.</p>
-        </div>
+        <div class="ratings"></div>
+        <div class="detailed-description"></div>
+        <div class="profile"></div>
     </div>
 
 </body>

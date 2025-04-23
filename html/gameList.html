@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/colors.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/gameList.css">
+    <link rel="stylesheet" href="../css/previewCard.css">
 </head>
 
 <body>
@@ -33,48 +34,42 @@
     <!-- Page Title -->
     <h1 class="page-title">Game List</h1>
 
-    <section class="game-list">
-        <div class="game-card" onclick="window.location.href='gamePage.html'">
-            <img src="../src/rdr2icon.png" alt="Game #1">
-            <div class="game-info">
-                <h2>Game #1</h2>
-                <p>Brief explanation about the game.</p>
-            </div>
-        </div>
+    <section class="game-list"></section>
 
-        <div class="game-card" onclick="window.location.href='gamePage.html'">
-            <img src="../src/mcicon.avif" alt="Game #2">
-            <div class="game-info">
-                <h2>Game #2</h2>
-                <p>Brief explanation about the game.</p>
-            </div>
-        </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/allGames.js"></script>
+    <script src="../js/previewCard.js"></script>
+    <script>
+        // 1. URL'den category parametresini al
+        const params = new URLSearchParams(window.location.search);
+        const category = params.get("category");
 
-        <div class="game-card" onclick="window.location.href='gamePage.html'">
-            <img src="../src/gta-icon.jpg" alt="Game #3">
-            <div class="game-info">
-                <h2>Game #3</h2>
-                <p>Brief explanation about the game.</p>
-            </div>
-        </div>
+        // 2. Sayfa başlığına yaz (örneğin "FEATURED")
+        const titleElement = document.querySelector('.page-title');
+        if (category && titleElement) {
+            titleElement.textContent = category.toUpperCase() + " GAMES";
+        }
 
-        <div class="game-card" onclick="window.location.href='gamePage.html'">
-            <img src="../src/terraria-icon.png" alt="Game #3">
-            <div class="game-info">
-                <h2>Game #4</h2>
-                <p>Brief explanation about the game.</p>
-            </div>
-        </div>
+        // 3. Listeyi DOM'dan bul
+        const container = document.querySelector('.game-list');
+        const filtered = allGames.filter(g => g.category === category);
 
-        <div class="game-card" onclick="window.location.href='gamePage.html'">
-            <img src="../src/poe2-icon.jpg" alt="Game #3">
+        // 4. Oyunları HTML'e bas
+        filtered.forEach(game => {
+            const div = document.createElement("div");
+            div.classList.add("game-card");
+            div.dataset.game = game.id;
+            div.innerHTML = `
+            <img src="${game.img1}" alt="${game.title}">
             <div class="game-info">
-                <h2>Game #5</h2>
-                <p>Brief explanation about the game.</p>
+              <h2>${game.title}</h2>
+              <p>${game.desc}</p>
             </div>
-        </div>
-        <!-- Add more games as needed -->
-    </section>
+          `;
+            div.onclick = () => window.location.href = `gamePage.html?game=${game.id}`;
+            container.appendChild(div);
+        });
+    </script>
 
 
 </body>

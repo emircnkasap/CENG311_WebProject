@@ -41,6 +41,8 @@ body {
 
 /* Game Image */
 .game-card img {
+    position: relative;
+    overflow: hidden;
     width: 150px;
     height: 150px;
     object-fit: cover;

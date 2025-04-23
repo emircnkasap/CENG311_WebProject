@@ -1,0 +1,222 @@
+const allGames = [
+    {
+        id: "game1",
+        title: "RDR2",
+        img1: "../src/games/RDR2_1.png",
+        img2: "../src/games/RDR2_2.jpeg",
+        desc: "Overrated",
+        category: "popular",
+        rating: "3",
+        detailed: "Amerika, 1899. Arthur Morgan ve Van der Linde çetesi kaçıyor. Federal ajanlar ve ülkenin en iyi ödül avcılarının amansız takibi altında çete üyeleri hayatta kalabilmek için soyguna, yağmaya ve dövüşmeye devam ederek Amerika'nın kalbindeki çetin toprakları geçmek zorunda. Bu süreçte iç çatışmaları da iyice derinleşen çete artık dağılmanın eşiğine gelirken Arthur da zor bir seçimle karşı karşıya: Onu yetiştiren çeteye sadık mı kalacak yoksa kendi ideallerinin peşinden mi gidecek?",
+        developer: "Rockstar Games"
+    },
+    {
+        id: "game2",
+        title: "Minecraft",
+        img1: "../src/games/Minecraft_1.webp",
+        img2: "../src/games/Minecraft_2.avif",
+        desc: "Bağımlılık Yapar",
+        category: "popular",
+        rating: "4.5",
+        detailed: "Hayal edebileceğin her şeyi inşa et, ürkütücü gizemleri keşfet ve en iyi sandbox oyununda gece boyunca hayatta kal. Minecraft'ta her oynayış farklıdır ve her köşenin ardında unutulmaz maceralar seni karşılar. Blok blok istediğin gibi şekillendirebileceğin sonsuz dünyada dilediğin gibi keşfet ve oluştur.",
+        developer: "Microsoft "
+    },
+    {
+        id: "game3",
+        title: "GTA V",
+        img1: "../src/games/GTAV_1.jpg",
+        img2: "../src/games/GTAV_2.jpg",
+        desc: "GTA 6 çıkacak",
+        category: "popular",
+        rating: "4",
+        detailed: "Kendilerini yeraltı suç dünyasının, ABD hükümetinin ve eğlence endüstrisinin en korkutucu ve dengesiz unsurlarından bazılarıyla iç içe bulan genç bir dolandırıcı, eski bir banka soyguncusu ve acımasız bir psikopat, başta birbirleri olmak üzere hiç kimseye güvenmedikleri acımasız bir şehirde hayatta kalmak için bir dizi tehlikeli soygun gerçekleştirmek zorunda.",
+        developer: "Rockstar Games"
+    },
+    {
+        id: "game4",
+        title: "Terraria",
+        img1: "../src/games/Terraria_1.png",
+        img2: "../src/games/Terraria_2.gif",
+        desc: "Terraria Oynarız",
+        category: "popular",
+        rating: "5",
+        detailed: "Kaz, savaş, keşfet, inşa et! Bu heyecan dolu macera oyununda hiçbir şey imkansız değil. Dünya senin tuvalin ve gördüğün her şey ise boyan. Aletlerini al ve işe koyul! Birbirinden farklı mekanlarda çeşitli düşmanlarla savaşmak için silah yap.İşine yarayan donanımlar, para ve diğer faydalı şeyler için derinlere doğru kazı yap.Kendi dünyanı inşaa etmek için ihtiyaç duyduğun kaynakları topla.Bir ev, bir hisar, hatta bir kale inşaa et.İnsanlar orada yaşamaya gelecektir ve belki de yolculuklarında sana yardımcı olacak çeşitli mallar satacaklardır. Ancak dikkat etmelisin, seni bekleyen bir çok zorlu görev var...Buna hazır mısın?",
+        developer: "Re-Logic"
+    },
+    {
+        id: "game5",
+        title: "Path of Exile",
+        img1: "../src/games/POE2_1.jpg",
+        img2: "../src/games/POE2_2.webp",
+        desc: "Path of Exile, Emircan çok sever",
+        category: "featured",
+        rating: "2",
+        detailed: "Path of Exile 2 is a next generation Action RPG from Grinding Gear Games, featuring co-op for up to six players. Path of Exile 2 takes place in the land of Wraeclast, a dark continent populated by unique cultures, ancient secrets, and monstrous dangers. A sinister threat, long thought destroyed, has begun creeping back on the edge of civilisation, driving people mad and sickening the land with Corruption.",
+        developer: "Grinding Gear Games"
+    },
+    {
+        id: "game6",
+        title: "Battlefield V",
+        img1: "../src/games/BattlefieldV_1.avif",
+        img2: "../src/games/BattlefieldV_2.avif",
+        desc: "Placeholder desc",
+        category: "featured",
+        rating: "3",
+        detailed: "İşte karşınızda en üst düzey Battlefield™ V deneyimi. En başından itibaren açılan tüm oynanış içerikleriyle karada, havada ve denizde insanlık tarihinin en büyük çatışmasına girin. Silahlar, taşıtlar ve cihazlardan oluşan eksiksiz cephanelikten seçim yapın ve kendinizi 2. Dünya Savaşı’ndaki çetin savaşlara katılmış gibi hissedin. Tam kadro Elit Askerler ve 1. Yıl ve 2. Yılın en iyi özelleştirme içerikleriyle savaş alanında parlayın.",
+        developer: "Electronic Arts"
+    },
+    {
+        id: "game7",
+        title: "Game 7",
+        img1: "../src/games/onur.png",
+        img2: "../src/games/emircan.png",
+        desc: "Placeholder desc",
+        category: "featured",
+        rating: "",
+        detailed: "",
+        developer: ""
+    },
+    {
+        id: "game8",
+        title: "Game 8",
+        img1: "../src/games/onur.png",
+        img2: "../src/games/emircan.png",
+        desc: "Placeholder desc",
+        category: "featured",
+        rating: "",
+        detailed: "",
+        developer: ""
+    },
+    {
+        id: "game9",
+        title: "Game 9",
+        img1: "../src/games/onur.png",
+        img2: "../src/games/emircan.png",
+        desc: "Placeholder desc",
+        category: "featured",
+        rating: "",
+        detailed: "",
+        developer: ""
+    },
+    {
+        id: "game10",
+        title: "Game 10",
+        img1: "../src/games/onur.png",
+        img2: "../src/games/emircan.png",
+        desc: "Placeholder desc",
+        category: "popular",
+        rating: "",
+        detailed: "",
+        developer: ""
+    },
+    {
+        id: "game11",
+        title: "Game 11",
+        img1: "../src/games/onur.png",
+        img2: "../src/games/emircan.png",
+        desc: "Placeholder desc",
+        category: "popular",
+        rating: "",
+        detailed: "",
+        developer: ""
+    },
+    {
+        id: "game12",
+        title: "Game 12",
+        img1: "../src/games/onur.png",
+        img2: "../src/games/emircan.png",
+        desc: "Placeholder desc",
+        category: "popular",
+        rating: "",
+        detailed: "",
+        developer: ""
+    },
+    {
+        id: "game13",
+        title: "Game 13",
+        img1: "../src/games/onur.png",
+        img2: "../src/games/emircan.png",
+        desc: "Placeholder desc",
+        category: "upcoming",
+        rating: "",
+        detailed: "",
+        developer: ""
+    },
+    {
+        id: "game14",
+        title: "Game 14",
+        img1: "../src/games/onur.png",
+        img2: "../src/games/emircan.png",
+        desc: "Placeholder desc",
+        category: "upcoming",
+        rating: "",
+        detailed: "",
+        developer: ""
+    },
+    {
+        id: "game15",
+        title: "Game 15",
+        img1: "../src/games/onur.png",
+        img2: "../src/games/emircan.png",
+        desc: "Placeholder desc",
+        category: "upcoming",
+        rating: "",
+        detailed: "",
+        developer: ""
+    },
+    {
+        id: "game16",
+        title: "Game 16",
+        img1: "../src/games/onur.png",
+        img2: "../src/games/emircan.png",
+        desc: "Placeholder desc",
+        category: "upcoming",
+        rating: "",
+        detailed: "",
+        developer: ""
+    },
+    {
+        id: "game17",
+        title: "Game 17",
+        img1: "../src/games/onur.png",
+        img2: "../src/games/emircan.png",
+        desc: "Placeholder desc",
+        category: "upcoming",
+        rating: "",
+        detailed: "",
+        developer: ""
+    },
+    {
+        id: "game18",
+        title: "Game 18",
+        img1: "../src/games/onur.png",
+        img2: "../src/games/emircan.png",
+        desc: "Placeholder desc",
+        category: "upcoming",
+        rating: "",
+        detailed: "",
+        developer: ""
+    },
+    {
+        id: "game19",
+        title: "Game 19",
+        img1: "../src/games/onur.png",
+        img2: "../src/games/emircan.png",
+        desc: "Placeholder desc",
+        category: "featured",
+        rating: "",
+        detailed: "",
+        developer: ""
+    },
+    {
+        id: "game20",
+        title: "Game 20",
+        img1: "../src/games/onur.png",
+        img2: "../src/games/emircan.png",
+        desc: "Placeholder desc",
+        category: "featured",
+        rating: "",
+        detailed: "",
+        developer: ""
+    }
+];
