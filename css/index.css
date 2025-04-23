@@ -28,6 +28,8 @@ h1 {
 /* Game Sections START*/
 .game-section {
   background-color: var(--game-section-bg);
+  position: relative;
+  min-height: 300px;
   width: 90%;
   max-width: 1000px;
   margin: 20px auto;

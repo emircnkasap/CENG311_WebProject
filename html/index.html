@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/colors.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/previewCard.css">
 </head>
 
 <body>
@@ -33,76 +34,32 @@
     <!-- Page Title -->
     <h1>Home Page</h1>
 
-    <!-- Latest Featured Games -->
-    <section class="game-section">
+    <section class="game-section" data-category="featured">
         <h2>Latest Featured Games</h2>
-        <div class="game-list">
-            <button class="game-btn" onclick="window.location.href='gamePage.html'">
-                <img src="../src/rdr2icon.png" alt="Game #1">
-            </button>
-            <button class="game-btn" onclick="window.location.href='gamePage.html'">
-                <img src="../src/mcicon.avif" alt="Game #2">
-            </button>
-            <button class="game-btn" onclick="window.location.href='gamePage.html'">
-                <img src="../src/gta-icon.jpg" alt="Game #3">
-            </button>
-            <button class="game-btn" onclick="window.location.href='gamePage.html'">
-                <img src="../src/terraria-icon.png" alt="Game #4">
-            </button>
-            <button class="game-btn" onclick="window.location.href='gamePage.html'">
-                <img src="../src/poe2-icon.jpg" alt="Game #5">
-            </button>
-        </div>
+        <div class="game-list"></div>
         <button class="view-all-btn" onclick="window.location.href='gameList.html'">View all</button>
     </section>
 
-    <!-- Most Downloaded Games -->
-    <section class="game-section">
+    <section class="game-section" data-category="popular">
         <h2>Most Downloaded Games</h2>
-        <div class="game-list">
-            <button class="game-btn" onclick="window.location.href='gamePage.html'">
-                <img src="../src/rdr2icon.png" alt="Game #1">
-            </button>
-            <button class="game-btn" onclick="window.location.href='gamePage.html'">
-                <img src="../src/mcicon.avif" alt="Game #2">
-            </button>
-            <button class="game-btn" onclick="window.location.href='gamePage.html'">
-                <img src="../src/gta-icon.jpg" alt="Game #3">
-            </button>
-            <button class="game-btn" onclick="window.location.href='gamePage.html'">
-                <img src="../src/terraria-icon.png" alt="Game #4">
-            </button>
-            <button class="game-btn" onclick="window.location.href='gamePage.html'">
-                <img src="../src/poe2-icon.jpg" alt="Game #5">
-            </button>
-        </div>
+        <div class="game-list"></div>
         <button class="view-all-btn" onclick="window.location.href='gameList.html'">View all</button>
     </section>
 
-
-    <!-- Upcoming Games -->
-    <section class="game-section">
+    <section class="game-section" data-category="upcoming">
         <h2>Upcoming Games</h2>
-        <div class="game-list">
-            <button class="game-btn" onclick="window.location.href='gamePage.html'">
-                <img src="../src/rdr2icon.png" alt="Game #1">
-            </button>
-            <button class="game-btn" onclick="window.location.href='gamePage.html'">
-                <img src="../src/mcicon.avif" alt="Game #2">
-            </button>
-            <button class="game-btn" onclick="window.location.href='gamePage.html'">
-                <img src="../src/gta-icon.jpg" alt="Game #3">
-            </button>
-            <button class="game-btn" onclick="window.location.href='gamePage.html'">
-                <img src="../src/terraria-icon.png" alt="Game #4">
-            </button>
-            <button class="game-btn" onclick="window.location.href='gamePage.html'">
-                <img src="../src/poe2-icon.jpg" alt="Game #5">
-            </button>
-        </div>
+        <div class="game-list"></div>
         <button class="view-all-btn" onclick="window.location.href='gameList.html'">View all</button>
     </section>
 
+
+    <!-- jQuery buraya -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Kendi JavaScript dosyan -->
+    <script src="../js/allGames.js"></script> <!-- oyun verileri -->
+    <script src="../js/generateGames.js"></script> <!-- oyunları oluşturur -->
+    <script src="../js/previewCard.js"></script> <!-- hover preview kartı -->
 
 </body>
 
