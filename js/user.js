@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    // Initialize or load localStorageDB
-    var db = new localStorageDB("gameAppDB", localStorage);
+    // Initialize or load LocalStorageDB
+    var db = new LocalStorageDB("gameAppDB", localStorage);
     if (db.isNew()) {
         db.createTable("users", ["username", "email", "password"]);
         db.commit();
@@ -44,7 +44,7 @@ $(document).ready(function() {
         db.insert("users", {
             username: username,
             email: email,
-            password: password // Note: in production, passwords should be hashed
+            password: password  // Note: for production, hash your passwords!
         });
         db.commit();
 
