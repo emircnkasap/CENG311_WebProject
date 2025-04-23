@@ -92,4 +92,12 @@ html {
     background-color: var(--button-hover-bg);
 }
 
+
+.welcome-msg {
+    font-weight: bold;
+    color: var(--text-color);
+    margin-right: 10px;
+    align-self: center;
+}
+
 /*Navbar Button Types END*/

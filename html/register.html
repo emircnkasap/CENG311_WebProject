@@ -31,22 +31,17 @@
   </nav>
 
   <!-- Register Form -->
-  <div class="form-container">
-    <h2>Register</h2>
-    <form id="registerForm">
-      <input type="text" id="username" placeholder="Username" required>
-      <input type="email" id="email" placeholder="Email" required>
-      <input type="password" id="password" placeholder="Password" required>
-      <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
-      <button type="submit" class="submit-btn">Register</button>
-    </form>
-    <p>Already have an account? <a href="login.html">Login here</a></p>
-  </div>
+  <div id="auth-widget" data-mode="register"></div>
 
   <!-- jQuery and LocalStorageDB plugin -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/LocalStorageDB/1.9.3/LocalStorageDB.min.js"></script>
-  <script src="../js/user.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <script src="../js/auth-widget.js"></script>
+  <script>$("#auth-widget").userAuth({ mode: "register" });</script>
+  <script src="../js/navbar.js"></script>
+  <!-- Auto-redirect -->
+  <script src="../js/auth-redirect.js"></script>
+
 
 </body>
 

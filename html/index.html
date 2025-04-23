@@ -33,6 +33,8 @@
 
     <!-- Page Title -->
     <h1>Home Page</h1>
+    <p id="welcomeMessage" class="welcome-msg"></p>
+    
 
     <section class="game-section" data-category="featured">
         <h2>Latest Featured Games</h2>
@@ -60,7 +62,16 @@
     <script src="../js/allGames.js"></script> <!-- oyun verileri -->
     <script src="../js/generateGames.js"></script> <!-- oyunları oluşturur -->
     <script src="../js/previewCard.js"></script> <!-- hover preview kartı -->
+    <script src="../js/navbar.js"></script>
 
+    <script>
+        $(document).ready(function () {
+        const username = localStorage.getItem("loggedInUser");
+            if (username) {
+                $("#welcomeMessage").text(`Hello ${username}!`);
+            }
+        });
+    </script>
 </body>
 
 </html>

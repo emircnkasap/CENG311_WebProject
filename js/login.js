@@ -1,32 +1,24 @@
-$(document).ready(function() {
-    // Initialize or load LocalStorageDB
-    var db = new LocalStorageDB("gameAppDB", localStorage);
-    if (db.isNew()) {
-        db.createTable("users", ["username", "email", "password"]);
-        db.commit();
-    }
+$(document).ready(function () {
+    const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    // Handle login form submission
-    $("#loginForm").on("submit", function(e) {
+    $("#loginForm").on("submit", function (e) {
         e.preventDefault();
 
-        var identifier = $("#loginIdentifier").val().trim();
-        var password = $("#loginPassword").val();
+        const identifier = $("#loginIdentifier").val().trim();
+        const password = $("#loginPassword").val();
 
         if (!identifier || !password) {
             alert("Please enter both username/email and password.");
             return;
         }
 
-        // Find a matching user (by username OR email) with the same password
-        var matched = db.queryAll("users", function(row) {
-            return (row.username === identifier || row.email === identifier) && row.password === password;
-        });
+        const user = users.find(user =>
+            (user.username === identifier || user.email === identifier) &&
+            user.password === password
+        );
 
-        if (matched.length === 1) {
-            // Store session info
-            localStorage.setItem("loggedInUser", matched[0].username);
-
+        if (user) {
+            localStorage.setItem("loggedInUser", user.username);
             alert("Login successful! Redirecting to home page...");
             window.location.href = "index.html";
         } else {

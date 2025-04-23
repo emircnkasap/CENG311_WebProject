@@ -24,6 +24,14 @@ h1 {
   color: var(--game-button-border);
   margin-bottom: 20px;
 }
+.welcome-msg {
+  font-weight: bold;
+  color: var(--text-color);
+  margin-right: 10px;
+  align-self: center;
+}
+
+
 
 /* Game Sections START*/
 .game-section {
