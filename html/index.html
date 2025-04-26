@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/previewCard.css">
+    <link rel="stylesheet" href="../css/scrollButton.css">
 </head>
 
 <body>
@@ -34,26 +35,46 @@
     <!-- Page Title -->
     <h1>Home Page</h1>
     <p id="welcomeMessage" class="welcome-msg"></p>
-    
+
 
     <section class="game-section" data-category="featured">
         <h2>Latest Featured Games</h2>
-        <div class="game-list"></div>
+        <div class="slider-wrapper">
+            <button class="prev-btn">‹</button>
+            <div class="game-list"></div>
+            <button class="next-btn">›</button>
+        </div>
         <button class="view-all-btn" onclick="window.location.href='gameList.html'">View all</button>
     </section>
 
     <section class="game-section" data-category="popular">
         <h2>Most Downloaded Games</h2>
-        <div class="game-list"></div>
+        <div class="slider-wrapper">
+            <button class="prev-btn">‹</button>
+            <div class="game-list"></div>
+            <button class="next-btn">›</button>
+        </div>
         <button class="view-all-btn" onclick="window.location.href='gameList.html'">View all</button>
     </section>
 
     <section class="game-section" data-category="upcoming">
         <h2>Upcoming Games</h2>
-        <div class="game-list"></div>
+        <div class="slider-wrapper">
+            <button class="prev-btn">‹</button>
+            <div class="game-list"></div>
+            <button class="next-btn">›</button>
+        </div>
         <button class="view-all-btn" onclick="window.location.href='gameList.html'">View all</button>
     </section>
 
+
+    <button class="scroll-top-btn" title="Go to top">
+        <svg class="arrow-up" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M8 12a.5.5 0 0 1-.5-.5V4.707L4.354 8.854a.5.5 0 0 1-.708-.708l4-4a.5.5 0 0 1 .708 0l4 4a.5.5 0 0 1-.708.708L8.5 4.707V11.5a.5.5 0 0 1-.5.5z" />
+        </svg>
+    </button>
 
     <!-- jQuery buraya -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -65,12 +86,86 @@
     <script src="../js/navbar.js"></script>
 
     <script>
+
+
         $(document).ready(function () {
-        const username = localStorage.getItem("loggedInUser");
+            const username = localStorage.getItem("loggedInUser");
             if (username) {
                 $("#welcomeMessage").text(`Hello ${username}!`);
             }
         });
+
+
+
+        $(document).ready(function () {
+            $('.game-section').each(function () {
+                const $section = $(this);
+                const $slider = $section.find('.game-list');
+                const $prev = $section.find('.prev-btn');
+                const $next = $section.find('.next-btn');
+
+                const scrollStep = 200; // Her tıkta 1 oyun kaydır
+
+                $next.click(function () {
+                    $slider.animate({
+                        scrollLeft: $slider.scrollLeft() + scrollStep
+                    }, 300);
+                });
+
+                $prev.click(function () {
+                    $slider.animate({
+                        scrollLeft: $slider.scrollLeft() - scrollStep
+                    }, 300);
+                });
+            });
+        });
+
+
+
+
+        $(document).ready(function () {
+            // ScrollTop button görünür/gizli olma ayarları
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                    $('.scroll-top-btn').fadeIn();
+                } else {
+                    $('.scroll-top-btn').fadeOut();
+                }
+            });
+
+            // Butona tıklayınca:
+            $('.scroll-top-btn').click(function () {
+                const $this = $(this);
+
+                // Önce minik basma efekti
+                $this.css({
+                    transform: "scale(0.8)",
+                    boxShadow: "0 0 10px #fff, 0 0 20px #ff8, 0 0 30px #ff8"
+                });
+
+                setTimeout(function () {
+                    // Sonra büyük bir patlama efekti
+                    $this.css({
+                        transform: "scale(1.3)",
+                        boxShadow: "0 0 30px #fff, 0 0 60px #ff8, 0 0 90px #ff8"
+                    });
+
+                    setTimeout(function () {
+                        // Sonra normale dön
+                        $this.css({
+                            transform: "scale(1)",
+                            boxShadow: "0 0 10px rgba(0,0,0,0.2)"
+                        });
+
+                        // Scroll to top işlemi
+                        $('html, body').animate({ scrollTop: 0 }, 800);
+                    }, 150);
+
+                }, 100);
+            });
+        });
+
+
     </script>
 </body>
 

@@ -5,8 +5,6 @@ document.querySelectorAll('.game-section').forEach(section => {
 
     const filteredGames = allGames.filter(game => game.category === category);
 
-    // İlk 5 oyun
-    const initialGames = filteredGames.slice(0, 5);
 
     const renderGames = (games) => {
         list.innerHTML = ''; // Temizle
@@ -20,7 +18,7 @@ document.querySelectorAll('.game-section').forEach(section => {
         });
     };
 
-    renderGames(initialGames);
+    renderGames(filteredGames);
 
     // "View All" butonuna basılınca tüm oyunları göster
     viewAllBtn.addEventListener('click', () => {

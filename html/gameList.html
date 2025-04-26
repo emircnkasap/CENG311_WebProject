@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/gameList.css">
     <link rel="stylesheet" href="../css/previewCard.css">
+    <link rel="stylesheet" href="../css/scrollButton.css">
 </head>
 
 <body>
@@ -35,6 +36,16 @@
     <h1 class="page-title">Game List</h1>
 
     <section class="game-list"></section>
+
+
+    <button class="scroll-top-btn" title="Go to top">
+        <svg class="arrow-up" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M8 12a.5.5 0 0 1-.5-.5V4.707L4.354 8.854a.5.5 0 0 1-.708-.708l4-4a.5.5 0 0 1 .708 0l4 4a.5.5 0 0 1-.708.708L8.5 4.707V11.5a.5.5 0 0 1-.5.5z" />
+        </svg>
+    </button>
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../js/allGames.js"></script>
@@ -69,6 +80,52 @@
             div.onclick = () => window.location.href = `gamePage.html?game=${game.id}`;
             container.appendChild(div);
         });
+
+
+        $(document).ready(function () {
+            // ScrollTop button görünür/gizli olma ayarları
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                    $('.scroll-top-btn').fadeIn();
+                } else {
+                    $('.scroll-top-btn').fadeOut();
+                }
+            });
+
+            // Butona tıklayınca:
+            $('.scroll-top-btn').click(function () {
+                const $this = $(this);
+
+                // Önce minik basma efekti
+                $this.css({
+                    transform: "scale(0.8)",
+                    boxShadow: "0 0 10px #fff, 0 0 20px #ff8, 0 0 30px #ff8"
+                });
+
+                setTimeout(function () {
+                    // Sonra büyük bir patlama efekti
+                    $this.css({
+                        transform: "scale(1.3)",
+                        boxShadow: "0 0 30px #fff, 0 0 60px #ff8, 0 0 90px #ff8"
+                    });
+
+                    setTimeout(function () {
+                        // Sonra normale dön
+                        $this.css({
+                            transform: "scale(1)",
+                            boxShadow: "0 0 10px rgba(0,0,0,0.2)"
+                        });
+
+                        // Scroll to top işlemi
+                        $('html, body').animate({ scrollTop: 0 }, 800);
+                    }, 150);
+
+                }, 100);
+            });
+        });
+
+
+
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../js/allGames.js" defer></script>
