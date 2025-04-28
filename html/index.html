@@ -27,6 +27,7 @@
         </div>
         <div class="right-section">
             <a href="aboutUs.html" class="navbarBtn">About Us</a>
+            <a href="contact.html" class="navbarBtn">Contact</a>
             <a href="login.html" class="navbarBtn">Login</a>
             <a href="register.html" class="navbarBtn">Register</a>
         </div>
@@ -76,14 +77,7 @@
         </svg>
     </button>
 
-    <!-- jQuery buraya -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- Kendi JavaScript dosyan -->
-    <script src="../js/allGames.js"></script> <!-- oyun verileri -->
-    <script src="../js/generateGames.js"></script> <!-- oyunları oluşturur -->
-    <script src="../js/previewCard.js"></script> <!-- hover preview kartı -->
-    <script src="../js/navbar.js"></script>
 
     <script>
 
@@ -96,77 +90,20 @@
         });
 
 
-
-        $(document).ready(function () {
-            $('.game-section').each(function () {
-                const $section = $(this);
-                const $slider = $section.find('.game-list');
-                const $prev = $section.find('.prev-btn');
-                const $next = $section.find('.next-btn');
-
-                const scrollStep = 200; // Her tıkta 1 oyun kaydır
-
-                $next.click(function () {
-                    $slider.animate({
-                        scrollLeft: $slider.scrollLeft() + scrollStep
-                    }, 300);
-                });
-
-                $prev.click(function () {
-                    $slider.animate({
-                        scrollLeft: $slider.scrollLeft() - scrollStep
-                    }, 300);
-                });
-            });
-        });
-
-
-
-
-        $(document).ready(function () {
-            // ScrollTop button görünür/gizli olma ayarları
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 50) {
-                    $('.scroll-top-btn').fadeIn();
-                } else {
-                    $('.scroll-top-btn').fadeOut();
-                }
-            });
-
-            // Butona tıklayınca:
-            $('.scroll-top-btn').click(function () {
-                const $this = $(this);
-
-                // Önce minik basma efekti
-                $this.css({
-                    transform: "scale(0.8)",
-                    boxShadow: "0 0 10px #fff, 0 0 20px #ff8, 0 0 30px #ff8"
-                });
-
-                setTimeout(function () {
-                    // Sonra büyük bir patlama efekti
-                    $this.css({
-                        transform: "scale(1.3)",
-                        boxShadow: "0 0 30px #fff, 0 0 60px #ff8, 0 0 90px #ff8"
-                    });
-
-                    setTimeout(function () {
-                        // Sonra normale dön
-                        $this.css({
-                            transform: "scale(1)",
-                            boxShadow: "0 0 10px rgba(0,0,0,0.2)"
-                        });
-
-                        // Scroll to top işlemi
-                        $('html, body').animate({ scrollTop: 0 }, 800);
-                    }, 150);
-
-                }, 100);
-            });
-        });
-
-
     </script>
+    <!-- sayfa içeriği + generateGames.js ile DOM’a game-btn’ları basan script’i yukarıda -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/allGames.js"></script>
+    <script src="../js/generateGames.js"></script>
+
+    <!-- plugin dosyaları -->
+    <script src="../js/jquery.simpleSlider.js"></script>
+    <script src="../js/jquery.scrollToTop.js"></script>
+    <script src="../js/jquery.previewCard.js"></script>
+
+    <!-- ana başlatıcı -->
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
 </body>
 
 </html>

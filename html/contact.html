@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../css/colors.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="left-section">
+            <div class="search-container">
+                <input type="text" placeholder="Search for games or profiles…" />
+                <button>🔍</button>
+            </div>
+        </div>
+        <div class="center-section">
+            <a href="index.html" class="navbarBtn">Home Page</a>
+        </div>
+        <div class="right-section">
+            <a href="aboutUs.html" class="navbarBtn">About Us</a>
+            <a href="contact.html" class="navbarBtn">Contact</a>
+            <a href="login.html" class="navbarBtn">Login</a>
+            <a href="register.html" class="navbarBtn">Register</a>
+        </div>
+    </nav>
+
+    <main class="contact-container">
+        <h1>Contact Us</h1>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject *</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send</button>
+        </form>
+        <div id="response" class="response-message"></div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/contact.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

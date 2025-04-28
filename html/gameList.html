@@ -27,6 +27,7 @@
         </div>
         <div class="right-section">
             <a href="aboutUs.html" class="navbarBtn">About Us</a>
+            <a href="contact.html" class="navbarBtn">Contact</a>
             <a href="login.html" class="navbarBtn">Login</a>
             <a href="register.html" class="navbarBtn">Register</a>
         </div>
@@ -49,7 +50,6 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../js/allGames.js"></script>
-    <script src="../js/previewCard.js"></script>
     <script>
         // 1. URL'den category parametresini al
         const params = new URLSearchParams(window.location.search);
@@ -80,58 +80,14 @@
             div.onclick = () => window.location.href = `gamePage.html?game=${game.id}`;
             container.appendChild(div);
         });
-
-
-        $(document).ready(function () {
-            // ScrollTop button görünür/gizli olma ayarları
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 50) {
-                    $('.scroll-top-btn').fadeIn();
-                } else {
-                    $('.scroll-top-btn').fadeOut();
-                }
-            });
-
-            // Butona tıklayınca:
-            $('.scroll-top-btn').click(function () {
-                const $this = $(this);
-
-                // Önce minik basma efekti
-                $this.css({
-                    transform: "scale(0.8)",
-                    boxShadow: "0 0 10px #fff, 0 0 20px #ff8, 0 0 30px #ff8"
-                });
-
-                setTimeout(function () {
-                    // Sonra büyük bir patlama efekti
-                    $this.css({
-                        transform: "scale(1.3)",
-                        boxShadow: "0 0 30px #fff, 0 0 60px #ff8, 0 0 90px #ff8"
-                    });
-
-                    setTimeout(function () {
-                        // Sonra normale dön
-                        $this.css({
-                            transform: "scale(1)",
-                            boxShadow: "0 0 10px rgba(0,0,0,0.2)"
-                        });
-
-                        // Scroll to top işlemi
-                        $('html, body').animate({ scrollTop: 0 }, 800);
-                    }, 150);
-
-                }, 100);
-            });
-        });
-
-
-
     </script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../js/allGames.js" defer></script>
+    <!-- Plugin dosyaları -->
+    <script src="../js/jquery.scrollToTop.js"></script>
+    <script src="../js/jquery.previewCard.js"></script>
+
+    <!-- Ana başlatıcı -->
+    <script src="../js/main.js"></script>
     <script src="../js/navbar.js"></script>
-
-
 </body>
 
 </html>
