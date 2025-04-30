@@ -2,12 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
+
+    <!-- Tema ve navbar stilleri -->
     <link rel="stylesheet" href="../css/colors.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/contact.css">
+
+    <!-- jQuery UI resmi teması -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 </head>
 
 <body>
@@ -32,31 +37,72 @@
     </nav>
 
     <main class="contact-container">
-        <h1>Contact Us</h1>
-        <form id="contactForm">
-            <div class="form-group">
-                <label for="name">Name *</label>
-                <input type="text" id="name" name="name" required>
+        <!-- 1) Tabs widget -->
+        <div id="contact-tabs">
+            <ul>
+                <li><a href="#tab-form">Contact Form</a></li>
+                <li><a href="#tab-faq">FAQ</a></li>
+            </ul>
+
+            <!-- Tab 1: İletişim Formu -->
+            <div id="tab-form">
+                <h1>Contact Us</h1>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactDate">Preferred Date</label>
+                        <input type="text" id="contactDate" name="contactDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send</button>
+                </form>
+                <div id="response" class="response-message"></div>
             </div>
-            <div class="form-group">
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" required>
+
+            <!-- Tab 2: Accordion FAQ -->
+            <div id="tab-faq">
+                <div id="faq-accordion">
+                    <h3>How do I register?</h3>
+                    <div>
+                        <p>Click “Register” in the navbar, fill out the form, and submit.</p>
+                    </div>
+                    <h3>How can I reset my password?</h3>
+                    <div>
+                        <p>Currently the app does not support password resets.</p>
+                    </div>
+                    <h3>What is the response time?</h3>
+                    <div>
+                        <p>We aim to reply within 24–48 hours.</p>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="subject">Subject *</label>
-                <input type="text" id="subject" name="subject" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message *</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn">Send</button>
-        </form>
-        <div id="response" class="response-message"></div>
+        </div>
     </main>
 
+    <!-- jQuery ve eklentiler -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Resmi jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <!-- Harici plugin: jQuery Validate -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+
+    <!-- Sayfa özel js -->
     <script src="../js/contact.js"></script>
+    <!-- Ortak navbar ve ana başlatıcı -->
     <script src="../js/navbar.js"></script>
     <script src="../js/main.js"></script>
 </body>

@@ -1,36 +1,72 @@
+/* contact.css */
+/* Temel konteyner stili */
 .contact-container {
     width: 90%;
     max-width: 600px;
     margin: 80px auto 40px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
+    background: var(--game-section-bg);
+    padding: 30px;
+    border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    font-family: Arial, sans-serif;
+    color: var(--subheading-color);
 }
 
-.contact-container h1 {
-    color: var(--heading-color);
-    margin-bottom: 20px;
+/* jQuery UI Tabs */
+#contact-tabs {
+    margin-top: 20px;
 }
 
-#contactForm .btn {
+/* Sekme başlıkları */
+.ui-tabs-nav {
+    border-bottom: 2px solid var(--button-bg);
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.ui-tabs-nav li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.ui-tabs-nav li a {
     display: block;
-    margin: 20px auto 0;
-    padding: 12px 40px;
-    font-size: 1.1rem;
-    max-width: 200px;
+    padding: 8px 16px;
+    text-decoration: none;
+    background: var(--game-section-bg);
+    color: var(--text-color);
+    border: 1px solid var(--button-bg);
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    transition: background-color 0.3s;
 }
 
+.ui-tabs-nav li.ui-tabs-active a {
+    background: var(--button-bg);
+    color: var(--button-text);
+    font-weight: bold;
+}
+
+/* Tab içerikleri */
+.ui-tabs-panel {
+    padding: 20px;
+    border: 1px solid var(--button-bg);
+    border-radius: 0 6px 6px 6px;
+    background: #fff;
+}
+
+/* Form grupları */
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     font-weight: bold;
-    color: var(--subheading-color);
+    color: var(--heading-color);
 }
 
 .form-group input,
@@ -38,11 +74,73 @@
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
     box-sizing: border-box;
+    transition: border-color 0.3s;
 }
 
-#response {
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--button-bg);
+    outline: none;
+}
+
+/* jQuery Validate hata mesajları */
+label.error {
+    color: #D35400;
+    font-size: 0.85rem;
+    margin-top: 4px;
+    display: block;
+}
+
+/* Datepicker input stili */
+#contactDate {
+    background: url("data:image/svg+xml;charset=UTF-8,<svg fill='%23ccc' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-2 .89-2 2v14c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 16H5V9h14v11zm0-13H5V6h14v1z'/></svg>") no-repeat right 12px center;
+    background-color: #fff;
+    background-size: 16px 16px;
+}
+
+/* Gönder butonu */
+#contactForm .btn {
+    display: block;
+    margin: 24px auto 0;
+    padding: 12px 40px;
+    font-size: 1.1rem;
+    max-width: 200px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contactForm .btn:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* Accordion */
+#faq-accordion h3 {
+    margin: 0;
+    padding: 12px 16px;
+    background-color: var(--game-section-bg);
+    color: var(--text-color);
+    border: 1px solid var(--button-bg);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+#faq-accordion .ui-accordion-content {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 16px !important;
+}
+
+/* Yanıt mesajı */
+.response-message {
+    text-align: center;
     margin-top: 20px;
     font-weight: bold;
     color: var(--text-color);
