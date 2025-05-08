@@ -101,3 +101,37 @@ html {
 }
 
 /*Navbar Button Types END*/
+
+/* Autocomplete Dropdown Styles */
+.autocomplete-dropdown {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    max-height: 220px;
+    overflow-y: auto;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    animation: fadeIn 0.2s ease;
+}
+.autocomplete-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+.autocomplete-item:last-child {
+    border-bottom: none;
+}
+.autocomplete-item:hover,
+.autocomplete-item.selected {
+    background: #e0e0e0;
+    color: #000;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
