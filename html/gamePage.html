@@ -26,7 +26,22 @@
 
             document.querySelector('.ratings').innerHTML = `
                 <h2>Ratings</h2>
-                ${'⭐'.repeat(Math.round(game.rating) || 0)} (${game.rating || 'N/A'}/5)
+                <div class="rating-container">
+                    <div class="average-rating">
+                        ${'⭐'.repeat(Math.round(game.rating) || 0)} (${game.rating || 'N/A'}/5)
+                    </div>
+                    <div class="user-rating">
+                        <h3>Your Rating</h3>
+                        <div class="star-rating">
+                            <span class="star" data-rating="1">★</span>
+                            <span class="star" data-rating="2">★</span>
+                            <span class="star" data-rating="3">★</span>
+                            <span class="star" data-rating="4">★</span>
+                            <span class="star" data-rating="5">★</span>
+                        </div>
+                        <div class="rating-message"></div>
+                    </div>
+                </div>
             `;
 
             document.querySelector('.detailed-description').innerHTML = `
@@ -82,6 +97,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script src="../js/navbar.js"></script>
+    <script src="../js/user.js"></script>
+    <script src="../js/ratingSystem.js"></script>
 
 
 </body>
