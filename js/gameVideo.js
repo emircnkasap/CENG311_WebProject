@@ -1,5 +1,5 @@
 $(document).ready(function () {  //AIzaSyDx4jyEwS-1jxBQ4yEl6zkcloPzaVLFJNk
-    const YOUTUBE_API_KEY = ''; // Buraya kendi YouTube API anahtarını yaz
+    const YOUTUBE_API_KEY = 'AIzaSyDx4jyEwS-1jxBQ4yEl6zkcloPzaVLFJNk'; // Buraya kendi YouTube API anahtarını yaz
     const gameId = new URLSearchParams(window.location.search).get('game'); // URL'den game id'yi al
 
     if (!gameId) return; // gameId yoksa işlemi durdur
