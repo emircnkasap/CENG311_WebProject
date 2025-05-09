@@ -1,9 +1,18 @@
+/* =============================== */
+/* GENEL SAYFA STİLLERİ           */
+/* =============================== */
+
 body {
     background-color: var(--background-color);
     color: var(--navbar-color);
     text-align: center;
     padding-top: 100px;
 }
+
+
+/* =============================== */
+/* HAKKIMIZDA (ABOUT US) BÖLÜMÜ   */
+/* =============================== */
 
 .about-us {
     display: flex;
@@ -27,13 +36,11 @@ body {
 
 .about-content h1 {
     color: var(--navbar-color);
-    /* Deep Blue */
     margin-bottom: 20px;
 }
 
 .about-content p {
     color: var(--subheading-color);
-    /* Biraz daha koyu mavi */
     font-size: 16px;
     margin-bottom: 15px;
 }
@@ -58,12 +65,11 @@ body {
 
 
 /* =============================== */
-/* TAKIM BÖLÜMÜ */
+/* TAKIM BÖLÜMÜ (TEAM SECTION)    */
 /* =============================== */
 
 .team {
     background-color: var(--game-button-hover-bg);
-    /* Soft Amber */
     padding: 50px;
     border-radius: 10px;
     margin: 50px auto;
@@ -73,7 +79,6 @@ body {
 
 .team h2 {
     color: var(--navbar-color);
-    /* Deep Blue */
     margin-bottom: 20px;
 }
 
@@ -114,10 +119,8 @@ body {
 
 .team-member h3 {
     color: var(--navbar-color);
-    /* Deep Blue */
 }
 
 .team-member p {
     color: var(--subheading-color);
-    /* Biraz daha koyu mavi */
 }

@@ -8,7 +8,7 @@ fetch("../json/allGames.json")
         var settings = $.extend({ delay: 500 }, options);
 
         return this.each(function () {
-          var $elem = $(this);                              // .game-btn veya .game-card
+          var $elem = $(this);  // .game-btn veya .game-card
           var isBtn = $elem.hasClass('game-btn');
           var $target = isBtn ? $elem.closest('.game-section') : $elem;
           var timeout, $preview;
@@ -76,22 +76,22 @@ fetch("../json/allGames.json")
             }, 300);
           }
 
-          // 1) hover delay ile göster
+          // hover delay ile göster
           $elem.on('mouseenter', function () {
             clearTimeout(timeout);
             timeout = setTimeout(show, settings.delay);
           });
 
-          // 2) butondan/karttan çıkınca: e.relatedTarget kartın preview’ı mı?
+          // butondan/karttan çıkınca: e.relatedTarget kartın preview’ı mı?
           $elem.on('mouseleave', function (e) {
             if ($preview && $(e.relatedTarget).closest('.preview-card').length) return;
             hide();
           });
 
-          // 3) preview’ın kendisinden çıkınca mutlaka gizle
+          // preview’ın kendisinden çıkınca mutlaka gizle
           $target.on('mouseleave', '.preview-card', hide);
 
-          // 4) section’dan (buton içindeki tüm alan) çıkınca gizle (sadece buton case’i için)
+          // section’dan (buton içindeki tüm alan) çıkınca gizle (sadece buton case’i için)
           if (isBtn) {
             $target.on('mouseleave', hide);
           }

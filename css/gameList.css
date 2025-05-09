@@ -3,7 +3,6 @@ body {
     background-color: var(--background-color);
     text-align: center;
     padding-top: 80px;
-    /* Adjust based on navbar height */
 }
 
 /* Page Title */
@@ -35,7 +34,6 @@ body {
 
 .game-card:hover {
     transform: scale(1.05);
-    /* Oyun butonunun hover rengi */
     background-color: var(--game-button-hover-bg);
 }
 

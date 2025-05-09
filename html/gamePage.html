@@ -17,7 +17,7 @@
             fetch('../json/allGames.json')
                 .then(res => res.json())
                 .then(data => {
-                    window.allGames = data; // ✅ global tanımla
+                    window.allGames = data; // global tanımla
 
                     const game = window.allGames.find(g => g.id === gameId);
 
@@ -58,7 +58,7 @@
                         <p>Developed by <strong>${game.developer || 'Unknown Developer'}</strong>.</p>
                     `;
 
-                    // ✅ JSON verisi ve HTML basımı tamamlandıktan sonra rating sistemini başlat
+                    // JSON verisi ve HTML basımı tamamlandıktan sonra rating sistemini başlat
                     if (typeof initRatingSystem === 'function') {
                         initRatingSystem(); // ratingSystem.js içindeki fonksiyon
                     }
@@ -137,6 +137,7 @@
     <script src="../js/user.js"></script>
     <script src="../js/ratingSystem.js"></script>
     <script src="../js/gameVideo.js"></script>
+    <script src="../js/glassEffect.js"></script>
 
 
 </body>
