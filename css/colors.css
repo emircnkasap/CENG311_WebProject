@@ -32,7 +32,7 @@
 
     /* YAZ - Hafif Deniz Mavisi */
     /* DEAFULT - Light Gray */
-    --background-color: #fff5e6;
+    --background-color: #ebd5b3;
     /* YAZ - Deniz Mavisi */
     /* DEAFULT - Deep Blue */
     --navbar-color: #2C3E50;
@@ -78,7 +78,7 @@
     --game-button-bg: #FFFFFF;
     /* YAZ - Açık Kum Rengi */
     /* DEAFULT - Soft Amber */
-    --game-button-hover-bg: #E8A84E;
+    --game-button-hover-bg: #ffc26c;
     /* YAZ - Deniz Mavisi - h1 color*/
     /* DEAFULT - Deep Blue */
     --game-button-border: #2C3E50;
