@@ -1,5 +1,9 @@
 /* contact.css */
 /* Temel konteyner stili */
+body {
+    background-color: var(--background-color);
+}
+
 .contact-container {
     width: 90%;
     max-width: 600px;

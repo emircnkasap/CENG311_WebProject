@@ -1,7 +1,7 @@
-$(document).ready(function() {
-    const YOUTUBE_API_KEY = 'AIzaSyAWYlSz4aNEqXL7AA8W5aBKosEGVc-poHM'; // Replace with your YouTube API key
+$(document).ready(function () {
+    const YOUTUBE_API_KEY = 'AIzaSyDx4jyEwS-1jxBQ4yEl6zkcloPzaVLFJNk'; // Replace with your YouTube API key
     const gameId = new URLSearchParams(window.location.search).get('game');
-    
+
     if (!gameId) return;
 
     // First, get the game title from allGames.json
@@ -10,7 +10,7 @@ $(document).ready(function() {
             $.ajax({
                 url: '../json/allGames.json',
                 method: 'GET',
-                success: function(data) {
+                success: function (data) {
                     const game = data.find(g => g.id === gameId);
                     if (game && game.title) {
                         resolve(game.title);
@@ -18,7 +18,7 @@ $(document).ready(function() {
                         reject('Game not found');
                     }
                 },
-                error: function(xhr, status, error) {
+                error: function (xhr, status, error) {
                     reject(error);
                 }
             });
@@ -28,7 +28,7 @@ $(document).ready(function() {
     function fetchGameVideo(gameTitle) {
         // Show loading state
         $('#game-video').show().html('<div class="loading">Loading trailer...</div>');
-        
+
         $.ajax({
             url: 'https://www.googleapis.com/youtube/v3/search',
             method: 'GET',
@@ -40,7 +40,7 @@ $(document).ready(function() {
                 type: 'video',
                 videoEmbeddable: true
             },
-            success: function(response) {
+            success: function (response) {
                 if (response.items && response.items.length > 0) {
                     const videoId = response.items[0].id.videoId;
                     displayVideo(videoId);
@@ -48,7 +48,7 @@ $(document).ready(function() {
                     $('#game-video').hide();
                 }
             },
-            error: function(xhr, status, error) {
+            error: function (xhr, status, error) {
                 console.error('Failed to fetch video:', error);
                 $('#game-video').hide();
             }

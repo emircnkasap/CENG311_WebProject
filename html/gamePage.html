@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/colors.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/gamePage.css">
+    <link rel="stylesheet" href="../css/scrollButton.css">
     <script defer>
         window.addEventListener('DOMContentLoaded', () => {
             const params = new URLSearchParams(window.location.search);
@@ -89,29 +90,49 @@
     </nav>
 
 
+    <div class="content-container">
 
-    <!-- Game Header -->
-    <div class="game-header">
-        <div class="game-overlay">
-            <h1 class="game-title">Loading...</h1>
-        </div>
-    </div>
-
-    <!-- Game Details -->
-    <div class="game-details">
-        <div class="ratings"></div>
-        <div class="detailed-description"></div>
-        <div id="game-video" class="game-video-section" style="display: none;">
-            <h3>Game Trailer</h3>
-            <div class="video-container">
-                <iframe id="game-trailer" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+        <!-- Game Header -->
+        <div class="game-header">
+            <div class="game-overlay">
+                <h1 class="game-title">Loading...</h1>
             </div>
         </div>
-        <div class="profile"></div>
+        <div class="game-details">
+            <div class="detailed-description"></div>
+            <div id="game-video" class="game-video-section" style="display: none;">
+                <h3>Game Trailer</h3>
+                <div class="video-container">
+                    <p>asdasd</p>
+                    <iframe id="game-trailer" width="560" height="315" frameborder="0"
+                        allowfullscreen>ASJMHGFDASDKJYHFG</iframe>
+                </div>
+            </div>
+            <div class="bottom-info">
+                <div class="ratings"></div>
+                <div class="profile"></div>
+            </div>
+        </div>
+        <button class="scroll-top-btn" title="Go to top">
+            <svg class="arrow-up" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M8 12a.5.5 0 0 1-.5-.5V4.707L4.354 8.854a.5.5 0 0 1-.708-.708l4-4a.5.5 0 0 1 .708 0l4 4a.5.5 0 0 1-.708.708L8.5 4.707V11.5a.5.5 0 0 1-.5.5z" />
+            </svg>
+        </button>
+
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.scroll-top-btn').scrollToTop(); // scroll butonunu başlat
+        });
+    </script>
+
+
+    <script src="../js/jquery.scrollToTop.js"></script>
     <script src="../js/navbar.js"></script>
     <script src="../js/user.js"></script>
     <script src="../js/ratingSystem.js"></script>

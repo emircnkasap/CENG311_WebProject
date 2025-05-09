@@ -1,8 +1,6 @@
 body {
     background-color: var(--background-color);
-    /* Light Gray */
     color: var(--navbar-color);
-    /* Deep Blue */
     text-align: center;
     padding-top: 100px;
 }
@@ -49,7 +47,15 @@ body {
     width: 100%;
     max-width: 400px;
     border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.about-image img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
 
 /* =============================== */
 /* TAKIM BÖLÜMÜ */
@@ -80,12 +86,17 @@ body {
 
 .team-member {
     background-color: var(--game-section-bg);
-    /* Beyaz */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .team-member img {
@@ -93,6 +104,12 @@ body {
     max-width: 150px;
     border-radius: 50%;
     margin-bottom: 10px;
+    border: 3px solid var(--navbar-color);
+    transition: transform 0.3s ease;
+}
+
+.team-member img:hover {
+    transform: rotate(1deg) scale(1.08);
 }
 
 .team-member h3 {
