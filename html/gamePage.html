@@ -8,53 +8,63 @@
     <link rel="stylesheet" href="../css/colors.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/gamePage.css">
-    <script src="../js/allGames.js" defer></script>
     <script defer>
         window.addEventListener('DOMContentLoaded', () => {
             const params = new URLSearchParams(window.location.search);
             const gameId = params.get('game');
-            const game = allGames.find(g => g.id === gameId);
 
-            if (!game) {
-                document.querySelector('.game-title').textContent = 'Game Not Found';
-                document.querySelector('.game-details').style.display = 'none';
-                return;
-            }
+            fetch('../json/allGames.json')
+                .then(res => res.json())
+                .then(data => {
+                    window.allGames = data; // ✅ global tanımla
 
-            document.querySelector('.game-header').style.backgroundImage = `url(${game.img1})`;
-            document.querySelector('.game-title').textContent = game.title;
+                    const game = window.allGames.find(g => g.id === gameId);
 
-            document.querySelector('.ratings').innerHTML = `
-                <h2>Ratings</h2>
-                <div class="rating-container">
-                    <div class="average-rating">
-                        ${'⭐'.repeat(Math.round(game.rating) || 0)} (${game.rating || 'N/A'}/5)
-                    </div>
-                    <div class="user-rating">
-                        <h3>Your Rating</h3>
-                        <div class="star-rating">
-                            <span class="star" data-rating="1">★</span>
-                            <span class="star" data-rating="2">★</span>
-                            <span class="star" data-rating="3">★</span>
-                            <span class="star" data-rating="4">★</span>
-                            <span class="star" data-rating="5">★</span>
+                    if (!game) {
+                        document.querySelector('.game-title').textContent = 'Game Not Found';
+                        document.querySelector('.game-details').style.display = 'none';
+                        return;
+                    }
+
+                    document.querySelector('.game-header').style.backgroundImage = `url(${game.img1})`;
+                    document.querySelector('.game-title').textContent = game.title;
+
+                    document.querySelector('.ratings').innerHTML = `
+                        <h2>Ratings</h2>
+                        <div class="rating-container">
+                            <div class="average-rating"></div>
+                            <div class="user-rating">
+                                <h3>Your Rating</h3>
+                                <div class="star-rating">
+                                    <span class="star" data-rating="1">★</span>
+                                    <span class="star" data-rating="2">★</span>
+                                    <span class="star" data-rating="3">★</span>
+                                    <span class="star" data-rating="4">★</span>
+                                    <span class="star" data-rating="5">★</span>
+                                </div>
+                                <div class="rating-message"></div>
+                            </div>
                         </div>
-                        <div class="rating-message"></div>
-                    </div>
-                </div>
-            `;
+                    `;
 
-            document.querySelector('.detailed-description').innerHTML = `
-                <h2>Detailed Game Explanation</h2>
-                <p>${game.detailed || 'No detailed description provided.'}</p>
-            `;
+                    document.querySelector('.detailed-description').innerHTML = `
+                        <h2>Detailed Game Explanation</h2>
+                        <p>${game.detailed || 'No detailed description provided.'}</p>
+                    `;
 
-            document.querySelector('.profile').innerHTML = `
-                <h2>Developer Profile</h2>
-                <p>Developed by <strong>${game.developer || 'Unknown Developer'}</strong>.</p>
-            `;
+                    document.querySelector('.profile').innerHTML = `
+                        <h2>Developer Profile</h2>
+                        <p>Developed by <strong>${game.developer || 'Unknown Developer'}</strong>.</p>
+                    `;
+
+                    // ✅ JSON verisi ve HTML basımı tamamlandıktan sonra rating sistemini başlat
+                    if (typeof initRatingSystem === 'function') {
+                        initRatingSystem(); // ratingSystem.js içindeki fonksiyon
+                    }
+                });
         });
     </script>
+
 </head>
 
 <body>

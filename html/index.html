@@ -77,29 +77,26 @@
         </svg>
     </button>
 
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/jquery.previewCard.js"></script>
+    <script src="../js/generateGames.js"></script>
 
     <script>
-
-
-        $(document).ready(function () {
-            const username = localStorage.getItem("loggedInUser");
-            if (username) {
-                $("#welcomeMessage").text(`Hello ${username}!`);
+        // .game-btn'lar generateGames.js ile yüklendikten sonra previewCard çalışsın
+        const observer = new MutationObserver(() => {
+            const cards = document.querySelectorAll('.game-btn');
+            if (cards.length > 0) {
+                $('.game-btn').previewCard();
+                observer.disconnect();
             }
         });
-
-
+        observer.observe(document.body, { childList: true, subtree: true });
     </script>
-    <!-- sayfa içeriği + generateGames.js ile DOM’a game-btn’ları basan script’i yukarıda -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../js/allGames.js"></script>
-    <script src="../js/generateGames.js"></script>
+
 
     <!-- plugin dosyaları -->
     <script src="../js/jquery.simpleSlider.js"></script>
     <script src="../js/jquery.scrollToTop.js"></script>
-    <script src="../js/jquery.previewCard.js"></script>
 
     <!-- ana başlatıcı -->
     <script src="../js/main.js"></script>

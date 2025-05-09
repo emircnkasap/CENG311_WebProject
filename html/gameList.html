@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game List</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="../css/colors.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/gameList.css">
@@ -47,40 +48,44 @@
         </svg>
     </button>
 
+    <!-- 1. previewCard tanımı (fetch'in DIŞINDA ve en önce gelmeli) -->
+    <script src="../js/jquery.previewCard.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../js/allGames.js"></script>
+    <!-- 2. Veriyi çek ve DOM’a bas, sonra previewCard çalıştır -->
     <script>
-        // 1. URL'den category parametresini al
-        const params = new URLSearchParams(window.location.search);
-        const category = params.get("category");
+        fetch("../json/allGames.json")
+            .then(res => res.json())
+            .then(data => {
+                window.allGames = data; // previewCard burada buna erişecek
+                const category = new URLSearchParams(window.location.search).get("category");
+                const container = document.querySelector('.game-list');
+                if (category) {
+                    document.querySelector('.page-title').textContent = category.toUpperCase() + " GAMES";
+                }
 
-        // 2. Sayfa başlığına yaz (örneğin "FEATURED")
-        const titleElement = document.querySelector('.page-title');
-        if (category && titleElement) {
-            titleElement.textContent = category.toUpperCase() + " GAMES";
-        }
+                const filtered = data.filter(g => g.category === category);
 
-        // 3. Listeyi DOM'dan bul
-        const container = document.querySelector('.game-list');
-        const filtered = allGames.filter(g => g.category === category);
+                filtered.forEach(game => {
+                    const div = document.createElement("div");
+                    div.classList.add("game-card");
+                    div.dataset.game = game.id;
+                    div.innerHTML = `
+          <img src="${game.img1}" alt="${game.title}">
+          <div class="game-info">
+            <h2>${game.title}</h2>
+            <p>${game.desc}</p>
+          </div>
+        `;
+                    div.onclick = () => window.location.href = `gamePage.html?game=${game.id}`;
+                    container.appendChild(div);
+                });
 
-        // 4. Oyunları HTML'e bas
-        filtered.forEach(game => {
-            const div = document.createElement("div");
-            div.classList.add("game-card");
-            div.dataset.game = game.id;
-            div.innerHTML = `
-            <img src="${game.img1}" alt="${game.title}">
-            <div class="game-info">
-              <h2>${game.title}</h2>
-              <p>${game.desc}</p>
-            </div>
-          `;
-            div.onclick = () => window.location.href = `gamePage.html?game=${game.id}`;
-            container.appendChild(div);
-        });
+                // ✅ Kartlar DOM'a eklendikten SONRA çalıştır
+                $('.game-card').previewCard();
+            });
     </script>
+
+
     <!-- Plugin dosyaları -->
     <script src="../js/jquery.scrollToTop.js"></script>
     <script src="../js/jquery.previewCard.js"></script>

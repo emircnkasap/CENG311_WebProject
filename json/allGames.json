@@ -1,0 +1,222 @@
+[
+  {
+    "id": "game1",
+    "title": "RDR2",
+    "img1": "../src/games/RDR2_1.png",
+    "img2": "../src/games/RDR2_2.jpeg",
+    "desc": "Overrated",
+    "category": "popular",
+    "rating": "3",
+    "detailed": "Amerika, 1899. Arthur Morgan ve Van der Linde çetesi kaçıyor...",
+    "developer": "Rockstar Games"
+  },
+  {
+    "id": "game2",
+    "title": "Minecraft",
+    "img1": "../src/games/Minecraft_1.webp",
+    "img2": "../src/games/Minecraft_2.avif",
+    "desc": "Bağımlılık Yapar",
+    "category": "popular",
+    "rating": "4.5",
+    "detailed": "Hayal edebileceğin her şeyi inşa et, keşfet, hayatta kal.",
+    "developer": "Microsoft"
+  },
+  {
+    "id": "game3",
+    "title": "GTA V",
+    "img1": "../src/games/GTAV_1.jpg",
+    "img2": "../src/games/GTAV_2.jpg",
+    "desc": "GTA 6 çıkacak",
+    "category": "popular",
+    "rating": "4",
+    "detailed": "Üç suçlunun tehlikeli soygun macerası.",
+    "developer": "Rockstar Games"
+  },
+  {
+    "id": "game4",
+    "title": "Terraria",
+    "img1": "../src/games/Terraria_1.png",
+    "img2": "../src/games/Terraria_2.gif",
+    "desc": "Terraria Oynarız",
+    "category": "popular",
+    "rating": "5",
+    "detailed": "Kaz, savaş, keşfet, inşa et! Her şey mümkün!",
+    "developer": "Re-Logic"
+  },
+  {
+    "id": "game5",
+    "title": "Path of Exile",
+    "img1": "../src/games/POE2_1.jpg",
+    "img2": "../src/games/POE2_2.webp",
+    "desc": "Path of Exile, Emircan çok sever",
+    "category": "featured",
+    "rating": "2",
+    "detailed": "Wraeclast kıtasında geçen karanlık bir RPG deneyimi.",
+    "developer": "Grinding Gear Games"
+  },
+  {
+    "id": "game6",
+    "title": "Battlefield V",
+    "img1": "../src/games/BattlefieldV_1.avif",
+    "img2": "../src/games/BattlefieldV_2.avif",
+    "desc": "Placeholder desc",
+    "category": "featured",
+    "rating": "3",
+    "detailed": "Battlefield V ile 2. Dünya Savaşı deneyimini yaşa.",
+    "developer": "Electronic Arts"
+  },
+  {
+    "id": "game7",
+    "title": "Game 7",
+    "img1": "../src/games/onur.png",
+    "img2": "../src/games/emircan.png",
+    "desc": "Placeholder desc",
+    "category": "featured",
+    "rating": "",
+    "detailed": "",
+    "developer": ""
+  },
+  {
+    "id": "game8",
+    "title": "Game 8",
+    "img1": "../src/games/onur.png",
+    "img2": "../src/games/emircan.png",
+    "desc": "Placeholder desc",
+    "category": "featured",
+    "rating": "",
+    "detailed": "",
+    "developer": ""
+  },
+  {
+    "id": "game9",
+    "title": "Game 9",
+    "img1": "../src/games/onur.png",
+    "img2": "../src/games/emircan.png",
+    "desc": "Placeholder desc",
+    "category": "featured",
+    "rating": "",
+    "detailed": "",
+    "developer": ""
+  },
+  {
+    "id": "game10",
+    "title": "Game 10",
+    "img1": "../src/games/onur.png",
+    "img2": "../src/games/emircan.png",
+    "desc": "Placeholder desc",
+    "category": "popular",
+    "rating": "",
+    "detailed": "",
+    "developer": ""
+  },
+  {
+    "id": "game11",
+    "title": "Game 11",
+    "img1": "../src/games/onur.png",
+    "img2": "../src/games/emircan.png",
+    "desc": "Placeholder desc",
+    "category": "popular",
+    "rating": "",
+    "detailed": "",
+    "developer": ""
+  },
+  {
+    "id": "game12",
+    "title": "Game 12",
+    "img1": "../src/games/onur.png",
+    "img2": "../src/games/emircan.png",
+    "desc": "Placeholder desc",
+    "category": "popular",
+    "rating": "",
+    "detailed": "",
+    "developer": ""
+  },
+  {
+    "id": "game13",
+    "title": "Game 13",
+    "img1": "../src/games/onur.png",
+    "img2": "../src/games/emircan.png",
+    "desc": "Placeholder desc",
+    "category": "upcoming",
+    "rating": "",
+    "detailed": "",
+    "developer": ""
+  },
+  {
+    "id": "game14",
+    "title": "Game 14",
+    "img1": "../src/games/onur.png",
+    "img2": "../src/games/emircan.png",
+    "desc": "Placeholder desc",
+    "category": "upcoming",
+    "rating": "",
+    "detailed": "",
+    "developer": ""
+  },
+  {
+    "id": "game15",
+    "title": "Game 15",
+    "img1": "../src/games/onur.png",
+    "img2": "../src/games/emircan.png",
+    "desc": "Placeholder desc",
+    "category": "upcoming",
+    "rating": "",
+    "detailed": "",
+    "developer": ""
+  },
+  {
+    "id": "game16",
+    "title": "Game 16",
+    "img1": "../src/games/onur.png",
+    "img2": "../src/games/emircan.png",
+    "desc": "Placeholder desc",
+    "category": "upcoming",
+    "rating": "",
+    "detailed": "",
+    "developer": ""
+  },
+  {
+    "id": "game17",
+    "title": "Game 17",
+    "img1": "../src/games/onur.png",
+    "img2": "../src/games/emircan.png",
+    "desc": "Placeholder desc",
+    "category": "upcoming",
+    "rating": "",
+    "detailed": "",
+    "developer": ""
+  },
+  {
+    "id": "game18",
+    "title": "Game 18",
+    "img1": "../src/games/onur.png",
+    "img2": "../src/games/emircan.png",
+    "desc": "Placeholder desc",
+    "category": "upcoming",
+    "rating": "",
+    "detailed": "",
+    "developer": ""
+  },
+  {
+    "id": "game19",
+    "title": "Game 19",
+    "img1": "../src/games/onur.png",
+    "img2": "../src/games/emircan.png",
+    "desc": "Placeholder desc",
+    "category": "featured",
+    "rating": "",
+    "detailed": "",
+    "developer": ""
+  },
+  {
+    "id": "game20",
+    "title": "Game 20",
+    "img1": "../src/games/onur.png",
+    "img2": "../src/games/emircan.png",
+    "desc": "Placeholder desc",
+    "category": "featured",
+    "rating": "",
+    "detailed": "",
+    "developer": ""
+  }
+]
